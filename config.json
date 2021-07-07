@@ -1,22 +1,51 @@
 {
   "mentions": {
-    "aung_min_khant": "791667210476060672",
-    "khant_zay_hlaing": "860082830050197534",
-    "swan_htoon_thar": "818060356878467093",
-    "wai_phyo": "711069654197469265",
-    "soe_htike": "851824888824987690",
-    "mee_bot": "159985870458322944"
+    "jayden": "742760611515203724",
+    "reply": {
+      "jayden": [
+        "ကိုကိုရေ ကိုကို့ ကို ခေါ်နေပါတယ်ရှင့်",
+        "ကိုကိုရေ့ လာပါဦး ဒီမှာ ကိုကို့ ကို ခေါ်နေတယ်",
+        "ကိုကိုရေ့ come come! ကိုကို့ fri တွေကလည်း ခေါ်နိုင်လွန်းတယ်"
+      ],
+      "others": [
+        "br ll hr? gay ny?",
+        "ဘာလဲ ဘာလဲ ဘာလဲ!!!",
+        "နင် ငါ့ကို လာလာမခေါ်နဲ့ ငါ့ကိုကို မကြိုက်ဘူး",
+        "lol လဲသေလိုက်"
+      ]
+    }
   },
-  "greet": [
+  "greet": {
+    "words": [
       "good morning",
       "gm",
       "morning",
       "mornee",
       "ohaiyo",
       "bonjour",
+      "good afternoon",
+      "afternoon",
+      "ga",
+      "noon",
+      "konichiwa",
+      "kon'nichiwa",
+      "konnichiwa",
+      "buenas tardes",
       "good night",
       "gn",
       "night\"",
-      "night night"
-    ]
+      "night night",
+      "oyasumi",
+      "oyasumi nasai",
+      "bonne nuit"
+    ],
+    "reply": {
+      "jayden": [
+        "hai, rr bwrr.",
+        "ဟုတ်ပါပြီရှင်၊ အာဘွားနော်။",
+        "rr bwrr. rr bwrr."
+      ],
+      "others": ["lol နင့်ကောင်မလေးထင်နေလား?", "s pw", "မရှက်တတ်?"]
+    }
+  }
 }

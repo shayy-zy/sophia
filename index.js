@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 const config = require('./config.json');
-const keepAlive = require('./server');
+const rand = require('./random');
+// const keepAlive = require('./server');
 
-const token = process.env['TOKEN'];
+// const token = process.env['TOKEN'];
+const token = 'ODYyMjk4OTE3NzQzNDkzMTIx.YOWUcg.4_3N1yBoEbwVImZbtRTuvyVnyYM';
 
 const client = new Discord.Client();
 
@@ -16,57 +18,46 @@ client.on('message', async msg => {
 
     if (msg.mentions) {
       let ids = msg.mentions.users.map(({ id }) => id);
-      if (ids.includes(config.mentions.aung_min_khant))
+      if (ids.includes(config.mentions.jayden))
         await msg.channel.send(
-          `<@${config.mentions.aung_min_khant}> ကိုကိုရေ ကိုကို့ကို ခေါ်နေတယ်ပါတယ်ရှင့်`
+          `<@${config.mentions.jayden}> ${
+            config.mentions.reply.jayden[
+              rand(config.mentions.reply.jayden.length)
+            ]
+          }`
         );
-      if (ids.includes(config.mentions.khant_zay_hlaing))
-        await msg.channel.send(
-          `<@${config.mentions.khant_zay_hlaing}> ခေါမီဆန်ပိုင် ${
-            msg.author.id === config.mentions.aung_min_khant
-              ? `ငါ့ကိုကို`
-              : `ရေ နင့်အဘိုး`
-          } ခေါ််နေတယ်.`
-        );
-      if (ids.includes(config.mentions.swan_htoon_thar))
-        await msg.channel.send(
-          msg.author.id === config.mentions.aung_min_khant
-            ? `<@${config.mentions.swan_htoon_thar}> ခေါ်ရင်ထူးလေ နင်က ဆရာကြီးလား?`
-            : `<@${config.mentions.swan_htoon_thar}> ခေါ်နေတယ်လို့ နားလေး?`
-        );
-      if (ids.includes(config.mentions.wai_phyo))
-        await msg.channel.send(`<@${config.mentions.wai_phyo}> lol စော်ငြင်းကောင် နင့်ကို ခေါ်နေတယ်လေ.`);
-      if (ids.includes(config.mentions.soe_htike))
-        await msg.channel.send(
-          msg.author.id === config.mentions.aung_min_khant
-            ? `<@${config.mentions.soe_htike}> ခေါ်နေရင် ထူးကြပါလို့ ဆရာကြီး အထာတွေနဲ့`
-            : `<@${config.mentions.soe_htike}> Haha. နင့်ဘိုးအေ ခေါ်နေတယ်. နားလေးနေတယ်ဆိုလည်း ပြောဦး ဆရာဝန်လေး ဘာလေး စောစောပြထားရအောင်လို့`
-        );
-      if (ids.includes(config.mentions.mee_bot))
-        await msg.channel.send(`<@${config.mentions.mee_bot}> နင့်ကို ခေါ်နေတယ်လေ s fa bot.`)
       if (ids.includes(client.user.id)) {
         const keyword = msg.content.slice(22, msg.content.length).trim();
-        if (msg.author.id === config.mentions.aung_min_khant) {
-          if (config.greet.includes(keyword)) {
-            await msg.reply(`hok kae ${keyword} koko <3`);
-          } else {
-            await msg.reply("br ll? m thi vu အာဘွားကွာ <33");
-          }
+
+        if (msg.author.id === config.mentions.jayden) {
+          await msg.reply(
+            `${
+              config.greet.reply.jayden[rand(config.greet.reply.jayden.length)]
+            } ${config.greet.words.includes(keyword) ? keyword : ''}`
+          );
         } else {
-          if (config.greet.includes(keyword)) {
-            await msg.reply(`Li ko ${keyword}?`);
+          if (config.greet.words.includes(keyword)) {
+            await msg.reply(
+              `${
+                config.greet.reply.others[
+                  rand(config.greet.reply.others.length)
+                ]
+              } li ko ${keyword}?`
+            );
           } else {
-            await msg.reply("br ll hrr? gay ny?");
+            await msg.reply(
+              config.mentions.reply.others[
+                rand(config.mentions.reply.others.length)
+              ]
+            );
           }
         }
       }
-      if (msg.author.id === config.mentions.mee_bot)
-        await msg.reply("နင်ကို နေရာတကာ ပါလွန်းတယ်");
     }
 
     // Commands
   }
 });
 
-keepAlive();
+// keepAlive();
 client.login(token);
