@@ -1,2 +1,2 @@
-# sophia
+# Sophia
 Discord Bot
