@@ -1,0 +1,22 @@
+{
+  "mentions": {
+    "aung_min_khant": "791667210476060672",
+    "khant_zay_hlaing": "860082830050197534",
+    "swan_htoon_thar": "818060356878467093",
+    "wai_phyo": "711069654197469265",
+    "soe_htike": "851824888824987690",
+    "mee_bot": "159985870458322944"
+  },
+  "greet": [
+      "good morning",
+      "gm",
+      "morning",
+      "mornee",
+      "ohaiyo",
+      "bonjour",
+      "good night",
+      "gn",
+      "night\"",
+      "night night"
+    ]
+}
